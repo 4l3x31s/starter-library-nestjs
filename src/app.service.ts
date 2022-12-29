@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
-
+import moment from 'moment';
 @Injectable()
 export class AppService {
   getHello(): string {
-    return 'Hello World!';
+
+    return moment().format('DD-MM-YYYY HH:mm:ss').toString();
   }
 }
